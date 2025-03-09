@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <header className="flex items-center justify-between h-16 w-full bg-gray-100 relative">
 
-      <SideBar isOpen={isOpen} />
+      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <div className="flex items-center justify-between w-full px-3">
         <div className="flex items-center">
