@@ -22,10 +22,14 @@ export const Header = () => {
                                 <MenuIcon size={24} />
                             </button>
                         }
+                        <a href="/">
                         <h1 className="text-xl font-bold ml-8 text-orange-950">Risoflora</h1>
+                        </a>
                     </div>
                 </div>
-                <ShoppingBagIcon size={26} className="mx-3 cursor-pointer" />
+                <a href="/cart">
+                <ShoppingBagIcon size={26} className="mx-3" />
+                </a>
             </div>
             
         </header>

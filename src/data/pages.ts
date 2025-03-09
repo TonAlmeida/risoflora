@@ -4,11 +4,19 @@ export const pages = [
         "path": "/"
     },
     {
-        "title": "About",
+        "title": "Produtos",
+        "path": "/products"
+    },
+    {
+        "title": "Sobre",
         "path": "/about"
     },
     {
-        "title": "Contact",
+        "title": "Carrinho",
+        "path": "/cart"
+    },
+    {
+        "title": "Contato",
         "path": "/contact"
     }
 ]

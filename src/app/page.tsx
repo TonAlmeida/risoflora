@@ -1,8 +1,9 @@
-import { Header } from "@/components/Header";
-import { SideBar } from "@/components/SideBar";
+import { Carroucel } from "@/components/Carroucel";
 
 export default function Page() {
   return (
-    <></>
+    <div className="h-full">
+      <Carroucel />
+    </div>
   );
 }
