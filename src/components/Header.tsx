@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { SideBar } from "./SideBar";
+import { SideBar } from "@/components/SideBar";
 import { MenuIcon, XIcon, ShoppingBagIcon } from "lucide-react";
 
 export const Header = () => {
@@ -8,11 +8,10 @@ export const Header = () => {
 
   return (
     <header className="flex items-center justify-between h-16 w-full bg-gray-100 relative">
-      {/* Sidebar */}
+
       <SideBar isOpen={isOpen} />
 
       <div className="flex items-center justify-between w-full px-3">
-        {/* Menu Button */}
         <div className="flex items-center">
           <button onClick={() => setIsOpen(!isOpen)} className="mr-3">
             {isOpen ? <XIcon size={24} /> : <MenuIcon size={24} />}
