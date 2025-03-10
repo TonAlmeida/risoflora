@@ -13,7 +13,7 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
     return (
         <>
             <nav
-                className={`absolute top-14 left-0 w-64 h-screen bg-gray-200 transform transition-all duration-400 z-50 ${
+                className={`absolute top-16 left-0 w-64 h-screen bg-gray-200 transform transition-all duration-400 z-50 ${
                     isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
                 }`}>
                 <ul>
@@ -39,7 +39,7 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                 isOpen && (
                     <div
                         onClick={() => setIsOpen(false)}
-                        className="fixed top-14 left-0 w-full h-full bg-black bg-opacity-50 z-40"
+                        className="fixed top-16 left-0 w-full h-full bg-black bg-opacity-50 z-40"
                     />
                 )
             }

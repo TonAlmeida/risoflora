@@ -5,14 +5,14 @@ export const BestSellers = () => {
             <h2 className="my-10 text-2xl ">
                 Mais Vendidos
             </h2>
-            <div className="grid grid-cols-2 grid-rows-7 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-7 gap-4">
                 {
                 bestSellers.map((product, index) => {
                     return (
                         <div
                             key={product.id}
                             className={`
-                                    ${index != 0 && index != (bestSellers.length-1) && 'row-span-2'}
+                                    ${index != 0 && index != (bestSellers.length-1) && 'sm:row-span-2'}
                             `}>
                             <a href="/" className="h-full p-10 bg-white shadow-md flex flex-col items-center justify-center">
                                 <img src={product.image} alt={product.name} className="h-48 w-48 object-cover" />
