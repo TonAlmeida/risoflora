@@ -4,7 +4,7 @@ export const pages = [
         "path": "/"
     },
     {
-        "title": "Produtos",
+        "title": "Galeria",
         "path": "/products"
     },
     {

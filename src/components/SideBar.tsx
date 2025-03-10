@@ -1,4 +1,5 @@
 import { pages } from '@/data/pages';
+import { act } from 'react';
 
 type Props = {
     isOpen: boolean;
@@ -21,13 +22,14 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                         const isActive = currentPath === page.path;
 
                         return (
-                            <li
-                                key={page.path}
-                                className={`p-4 hover:bg-orange-950 hover:text-white
-                                    cursor-pointer ${isActive && "bg-orange-950 text-white"}`}  
-                            >
-                                {page.title}
-                            </li>
+                            <a key={page.path} href={page.path}>
+                                <li
+                                    className={`p-4 hover:bg-orange-950 hover:text-white
+                                        cursor-pointer ${isActive && "bg-orange-950 text-white"}`}  
+                                >
+                                    {page.title}
+                                </li>
+                            </a>
                         )
                     })
                     }

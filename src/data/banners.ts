@@ -3,7 +3,7 @@ export const banners = [
         id: 1,
         title: "Banner 1",
         description: "Banner 1 description",
-        image: "images/banner1.jpeg",
+        image: "images/banner1.jpg",
     },
     {
         id: 2,
