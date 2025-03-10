@@ -7,7 +7,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between h-16 w-full bg-gray-100 relative">
+    <header className="flex items-center justify-between h-16 min-h-16 w-full bg-gray-100 relative">
 
       <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
 
