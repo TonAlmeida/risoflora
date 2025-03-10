@@ -5,7 +5,7 @@ export const BestSellers = () => {
             <h2 className="my-10 text-2xl ">
                 Mais Vendidos
             </h2>
-            <div className="grid grid-cols-2 grid-rows-8 gap-4">
+            <div className="grid grid-cols-2 grid-rows-7 gap-4">
                 {
                 bestSellers.map((product, index) => {
                     return (
