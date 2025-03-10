@@ -1,7 +1,7 @@
 import { bestSellers } from "@/data/bestSellers";
 export const BestSellers = () => {
     return (
-        <section className="text-center p-10 my-10 text-orange-950 ">
+        <section className="text-center p-14 text-orange-950 bg-white">
             <h2 className="my-10 text-2xl ">
                 Mais Vendidos
             </h2>

@@ -39,7 +39,7 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                 isOpen && (
                     <div
                         onClick={() => setIsOpen(false)}
-                        className="fixed top-16 left-0 w-full h-full bg-black bg-opacity-50 z-40"
+                        className={`fixed top-16 left-0 w-full h-full bg-black bg-opacity-50 z-40`}
                     />
                 )
             }

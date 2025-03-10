@@ -1,7 +1,7 @@
 import {categories} from "@/data/categories";
 export const Categories = () => {
     return (
-        <section className="text-center p-10 my-10">
+        <section className="text-center p-14 bg-white">
             <h2 className="my-10 text-2xl text-orange-950">Categories</h2>
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 md:grid-cols-4">
                 {

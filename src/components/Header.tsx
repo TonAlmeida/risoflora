@@ -1,10 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SideBar } from "@/components/SideBar";
 import { MenuIcon, XIcon, ShoppingBagIcon } from "lucide-react";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    isOpen ?
+    (document.body.style.overflow = "hidden"):
+    (document.body.style.overflow = "auto");
+  }, [isOpen])
 
   return (
     <header className="flex items-center justify-between h-16 min-h-16 w-full bg-gray-100 relative">
