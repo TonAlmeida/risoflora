@@ -8,30 +8,39 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { clients } from "@/data/clients"
 
 export function OurClients() {
   return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full max-w-sm"
-    >
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+    <div className="w-full flex justify-center py-10">
+        <Carousel
+            opts={{
+                align: "start",
+            }}
+            className="w-4/5"
+            >
+            <CarouselContent>
+                {clients.map((client, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                    <Card>
+                        <CardContent className="flex italic flex-col aspect-square items-center justify-center p-6">
+                            <p>
+                                {client.testimonial}
+                            </p>
+                           <div className="flex items-center p-4">
+                            <div className="rounded-full size-20 bg-gray-700 m-3" ></div>
+                            <h1 className="text-xl p-1">{client.name}</h1>
+                           </div>
+                        </CardContent>
+                    </Card>
+                    </div>
+                </CarouselItem>
+                ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+            </Carousel>
             </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
   )
 }

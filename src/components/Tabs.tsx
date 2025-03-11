@@ -12,7 +12,7 @@ export const Tabs = () => {
   };
 
   return (
-    <div className="my-10 text-white h-[450px] bg-orange-950">
+    <div className="my-10 text-white h-[450px] bg-gray-500">
       <div id="tabs" className="w-full flex justify-around italic">
         <div
           className={`${tabClass} ${selected === "sobre" ? "border-white" : ""}`}
