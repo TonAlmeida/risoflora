@@ -13,7 +13,7 @@ export const Header = () => {
   }, [isOpen])
 
   return (
-    <header className="flex items-center justify-between h-16 min-h-16 w-full bg-gray-100 relative">
+    <header className="flex items-center justify-between h-16 min-h-16 w-full bg-gray-100 relative z-40">
 
       <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
 

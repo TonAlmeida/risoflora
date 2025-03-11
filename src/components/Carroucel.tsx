@@ -37,9 +37,9 @@ export function Carroucel() {
             banners.map((banner, index) => (
               <CarouselItem key={index} className="w-full flex-shrink-0">
                 <img
-                  src={banner.image}
+                  src={banner.url}
                   alt={banner.title}
-                  className="w-full h-96 object-cover" // Define uma altura fixa para todas as imagens
+                  className="w-full h-96 object-cover"
                 />
               </CarouselItem>
             ))

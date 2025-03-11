@@ -1,5 +1,7 @@
+"use client"
 import { pages } from '@/data/pages';
-import { act } from 'react';
+import { useEffect, useState } from 'react';
+
 
 type Props = {
     isOpen: boolean;
@@ -8,7 +10,11 @@ type Props = {
  
 export const SideBar = ({ isOpen, setIsOpen }: Props) => {
 
-    const currentPath = window.location.pathname;
+    const [currentPath, setCurrentPath] = useState('');
+
+    useEffect(() => {
+        setCurrentPath(window.location.pathname);
+    }, []);
 
     return (
         <>
@@ -24,8 +30,8 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                         return (
                             <a key={page.path} href={page.path}>
                                 <li
-                                    className={`p-4 hover:bg-orange-950 hover:text-white
-                                        cursor-pointer ${isActive && "bg-orange-950 text-white"}`}  
+                                    className={`p-4 hover:bg-risoflora hover:text-white
+                                        cursor-pointer ${isActive && "bg-risoflora text-white"}`}  
                                 >
                                     {page.title}
                                 </li>
@@ -39,7 +45,7 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                 isOpen && (
                     <div
                         onClick={() => setIsOpen(false)}
-                        className={`fixed top-16 left-0 w-full h-full bg-black bg-opacity-50 z-40`}
+                        className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-5 z-30`}
                     />
                 )
             }

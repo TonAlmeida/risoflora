@@ -3,8 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Header } from "@/components/Header";
-import { SideBar } from "@/components/SideBar";
-
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,14 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="min-h-screen h-screen" lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-5xl mx-auto min-h-screen bg-gray-300`}
       >
-            <div className="flex flex-col h-screen">
-            <Header />
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          {/* Certifique-se de que o conteúdo ocupe o restante da altura disponível */}
+          <main className="flex-1">
             {children}
-            </div>
+          </main>
+        </div>
       </body>
     </html>
   );
