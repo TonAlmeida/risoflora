@@ -17,14 +17,14 @@ export function OurClients() {
             opts={{
                 align: "start",
             }}
-            className="w-4/5"
+            className="w-2/3"
             >
             <CarouselContent>
                 {clients.map((client, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2">
                     <div className="p-1">
                     <Card>
-                        <CardContent className="flex italic flex-col aspect-square items-center justify-center p-6">
+                        <CardContent className="flex italic flex-col justify-end aspect-square items-center p-6">
                             <p>
                                 {client.testimonial}
                             </p>

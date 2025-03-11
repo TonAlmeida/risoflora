@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const Tabs = () => {
   const tabClass =
-    "cursor-pointer p-3 text-2xl text-center border-b-4 border-transparent hover:border-white flex-1";
+    "cursor-pointer p-3 text-2xl text-center border-b-4 border-transparent hover:border-risoflora flex-1";
   
   const [selected, setSelected] = useState<string>("sobre");
 
@@ -12,29 +12,29 @@ export const Tabs = () => {
   };
 
   return (
-    <div className="my-10 text-white h-[450px] bg-gray-500">
+    <div className="my-10 text-orange-950 h-[600px] sm:h-[400px] bg-white">
       <div id="tabs" className="w-full flex justify-around italic">
         <div
-          className={`${tabClass} ${selected === "sobre" ? "border-white" : ""}`}
+          className={`${tabClass} ${selected === "sobre" ? "border-risoflora" : ""}`}
           onClick={() => changeSelectedTab("sobre")}
         >
           Sobre Nós
         </div>
         <div
-          className={`${tabClass} ${selected === "missao" ? "border-white" : ""}`}
+          className={`${tabClass} ${selected === "missao" ? "border-risoflora" : ""}`}
           onClick={() => changeSelectedTab("missao")}
         >
           Nossa Missão
         </div>
         <div
-          className={`${tabClass} ${selected === "objetivos" ? "border-white" : ""}`}
+          className={`${tabClass} ${selected === "objetivos" ? "border-risoflora" : ""}`}
           onClick={() => changeSelectedTab("objetivos")}
         >
           Nossos Objetivos
         </div>
       </div>
       
-      <div className="h-10 w-full justify-around flex p-6 text-gray-500">
+      <div className="h-10 w-full justify-around flex p-6 text-orange-950">
 
         <div
           className={`transition-all duration-200 w-full italic h-fit rounded-md p-5 bg-white ${

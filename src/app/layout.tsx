@@ -1,8 +1,10 @@
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
 import { Header } from "@/components/Header";
+import { ButtonUp } from "@/components/ButtonUp";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,10 +34,10 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen">
           <Header />
-          {/* Certifique-se de que o conteúdo ocupe o restante da altura disponível */}
           <main className="flex-1">
             {children}
           </main>
+          <ButtonUp />
         </div>
       </body>
     </html>
