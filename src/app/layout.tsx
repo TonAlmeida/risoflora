@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Header } from "@/components/Header";
-import { ButtonUp } from "@/components/ButtonUp";
+import { UpButton } from "@/components/UpButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,7 +37,7 @@ export default function RootLayout({
           <main className="flex-1">
             {children}
           </main>
-          <ButtonUp />
+          <UpButton />
         </div>
       </body>
     </html>

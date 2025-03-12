@@ -1,10 +1,9 @@
 "use client"
 import { useState, useEffect } from 'react';
 
-export const ButtonUp = () => {
+export const UpButton = () => {
   const [showButton, setShowButton] = useState(false);
 
-  // Função para verificar a posição da rolagem
   const handleScroll = () => {
     if (window.scrollY > 200) {
       setShowButton(true);
@@ -13,17 +12,14 @@ export const ButtonUp = () => {
     }
   };
 
-  // UseEffect para adicionar e limpar o event listener de scroll
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
-    // Limpeza do event listener ao desmontar o componente
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Função para voltar ao topo
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -33,7 +29,6 @@ export const ButtonUp = () => {
 
   return (
     <div>
-      {/* Botão de voltar ao topo, aparece apenas se showButton for true */}
       {showButton && (
         <button
           onClick={scrollToTop}

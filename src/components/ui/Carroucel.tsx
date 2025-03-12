@@ -9,9 +9,9 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"
-import { banners } from "@/data/banners"
+import { bannerType } from "@/types/bannerType"
 
-export function Carroucel() {
+export function Carroucel({banners}: {banners: bannerType[]}) {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
@@ -45,8 +45,8 @@ export function Carroucel() {
             ))
           }
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="left-7" />
+        <CarouselNext className="right-7"/>
       </Carousel>
       <div className="py-2 text-center text-sm text-muted-foreground">
         Slide {current} of {count}

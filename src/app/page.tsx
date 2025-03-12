@@ -1,15 +1,26 @@
 import { BestSellers } from "@/components/BestSellers";
-import { Carroucel } from "@/components/Carroucel";
+import { Carroucel } from "@/components/ui/Carroucel";
 import { Categories } from "@/components/Categories";
 import { Footer } from "@/components/Footer";
-import { WhyOrganic } from "@/components/WhyOrganic";
+import { Curiosity } from "@/components/Curiosity";
+
+import { banners } from "@/data/banners";
+
+const curiosity = {
+  title: 'Porque Orgânico?',
+  body: `Consumir produtos orgânicos é uma escolha saudável
+    porque eles são cultivados sem pesticidas e fertilizantes
+    sintéticos, preservando a saúde do solo, da água e dos
+    consumidores. Além disso, eles tendem a ter mais nutrientes
+    e são mais sustentáveis, beneficiando o meio ambiente.`
+}
 
 export default function Page() {
   return (
     <main className="h-full bg-white">
-      <Carroucel />
+      <Carroucel banners={banners} />
       <Categories />
-      <WhyOrganic />
+      <Curiosity title={curiosity.title} body={curiosity.body} />
       <BestSellers />
       <Footer />
     </main>

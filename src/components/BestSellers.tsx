@@ -1,10 +1,9 @@
 import { bestSellers } from "@/data/bestSellers";
+import { Title } from "./ui/Title";
 export const BestSellers = () => {
     return (
         <section className="text-center p-14 text-orange-950 bg-white">
-            <h2 className="my-10 text-2xl ">
-                Mais Vendidos
-            </h2>
+            <Title title="Mais Vendidos" />
             <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-7 gap-4">
                 {
                 bestSellers.map((product, index) => {

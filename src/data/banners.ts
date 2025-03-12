@@ -1,4 +1,5 @@
-export const banners = [
+import { bannerType } from "@/types/bannerType"
+export const banners: bannerType[] = [
     {
         id: 1,
         title: "Banner 1",

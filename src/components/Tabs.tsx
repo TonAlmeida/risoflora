@@ -3,9 +3,10 @@ import { useState } from "react";
 
 export const Tabs = () => {
   const tabClass =
-    "cursor-pointer p-3 text-2xl text-center border-b-4 border-transparent hover:border-risoflora flex-1";
+    "cursor-pointer p-3 text-2xl text-center hover:border-risoflora hover:border-b-4 flex-1";
   
-  const [selected, setSelected] = useState<string>("sobre");
+
+  const [selected, setSelected] = useState<string>("about");
 
   const changeSelectedTab = (tab: string) => {
     setSelected(tab);
@@ -15,20 +16,20 @@ export const Tabs = () => {
     <div className="my-10 text-orange-950 h-[600px] sm:h-[400px] bg-white">
       <div id="tabs" className="w-full flex justify-around italic">
         <div
-          className={`${tabClass} ${selected === "sobre" ? "border-risoflora" : ""}`}
-          onClick={() => changeSelectedTab("sobre")}
+          className={`${tabClass} ${selected == "about" && "border-risoflora border-b-4"}`}
+          onClick={() => changeSelectedTab("about")}
         >
           Sobre Nós
         </div>
         <div
-          className={`${tabClass} ${selected === "missao" ? "border-risoflora" : ""}`}
-          onClick={() => changeSelectedTab("missao")}
+          className={`${tabClass} ${selected === "mission" && "border-risoflora border-b-4"}`}
+          onClick={() => changeSelectedTab("mission")}
         >
           Nossa Missão
         </div>
         <div
-          className={`${tabClass} ${selected === "objetivos" ? "border-risoflora" : ""}`}
-          onClick={() => changeSelectedTab("objetivos")}
+          className={`${tabClass} ${selected === "goals" && "border-risoflora border-b-4"}`}
+          onClick={() => changeSelectedTab("goals")}
         >
           Nossos Objetivos
         </div>
@@ -38,7 +39,7 @@ export const Tabs = () => {
 
         <div
           className={`transition-all duration-200 w-full italic h-fit rounded-md p-5 bg-white ${
-            selected === "sobre" ? "block" : "hidden opacity-0"
+            selected === "about" ? "block" : "hidden opacity-0"
           }`}
         >
           <h1 className="text-2xl p-5">Sobre Nós</h1>
@@ -58,7 +59,7 @@ export const Tabs = () => {
 
         <div
           className={`transition-all duration-200 w-full italic h-fit rounded-md p-5 bg-white ${
-            selected === "missao" ? "block" : "hidden opacity-0"
+            selected === "mission" ? "block" : "hidden opacity-0"
           }`}
         >
           <h1 className="text-2xl p-5">Nossa Missão</h1>
@@ -77,7 +78,7 @@ export const Tabs = () => {
  
         <div
           className={`transition-all duration-200 w-full italic h-fit rounded-md p-5 bg-white ${
-            selected === "objetivos" ? "block" : "hidden opacity-0"
+            selected === "goals" ? "block" : "hidden opacity-0"
           }`}
         >
           <h1 className="text-2xl p-5">Nossos Objetivos</h1>

@@ -8,31 +8,32 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { clients } from "@/data/clients"
+import { team } from "@/data/team"
+import { Title } from "./ui/Title"
 
-export function OurClients() {
+export function OurTeam() {
   return (
     <div className="text-center">
-    <h2 className="my-10 text-2xl text-orange-950">Nossos Clientes</h2>
+    <Title title="Nosso Time" />
     <div className="w-full flex justify-center py-10">
         <Carousel
             opts={{
                 align: "start",
             }}
-            className="w-2/3"
+            className="w-2/3 sm:W-1/4"
             >
             <CarouselContent>
-                {clients.map((client, index) => (
+                {team.map((colab, index) => (
                 <CarouselItem key={index} className="md:basis-1/2">
                     <div className="p-1">
                     <Card>
-                        <CardContent className="flex italic flex-col justify-end aspect-square items-center p-6">
+                        <CardContent className="flex italic flex-col-reverse justify-end aspect-square items-center p-6">
                             <p>
-                                {client.testimonial}
+                                {colab.testimonial}
                             </p>
-                           <div className="flex items-center p-4">
-                            <div className="rounded-full size-20 bg-gray-700 m-3" ></div>
-                            <h1 className="text-xl p-1">{client.name}</h1>
+                           <div className="flex flex-col items-center p-4">
+                                <div className="rounded-full size-32 bg-gray-700 m-3" ></div>
+                                <h1 className="text-xl p-1">{colab.name}</h1>
                            </div>
                         </CardContent>
                     </Card>
