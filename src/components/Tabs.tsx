@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const Tabs = () => {
   const tabClass =
-    "cursor-pointer p-3 text-2xl text-center hover:border-risoflora hover:border-b-4 flex-1";
+    "cursor-pointer p-3 text-sm sm:text-xl md:text-2xl text-center hover:border-risoflora hover:border-b-4 flex-1";
   
 
   const [selected, setSelected] = useState<string>("about");
@@ -81,7 +81,7 @@ export const Tabs = () => {
             selected === "goals" ? "block" : "hidden opacity-0"
           }`}
         >
-          <h1 className="text-2xl p-5">Nossos Objetivos</h1>
+          <h2 className="text-2xl p-5">Nossos Objetivos</h2>
           <ul className="list-disc p-5">
             <li className="m-1">Proporcionar uma experiência encantadora e inesquecível aos nossos clientes.</li>
             <li className="m-1">Oferecer produtos frescos e de alta qualidade, cuidadosamente selecionados.</li>

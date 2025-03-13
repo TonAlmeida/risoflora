@@ -1,5 +1,4 @@
 import { Banner } from "@/components/ui/Banner";
-import { Footer } from "@/components/Footer";
 import { OurClients } from "@/components/OurClients";
 import { Tabs } from "@/components/Tabs";
 import { OurWork } from "@/components/OurWork";
@@ -18,13 +17,12 @@ const curiosity = {
 export const About = () => {
     return (
         <main className="h-full bg-white">
-            <Banner title="Sobre" color="risoflora" />
+            <Banner url="/about" title="Sobre" color="risoflora" />
             <Tabs />
             <OurWork />
             <OurTeam />
              <Curiosity title={curiosity.title} body={curiosity.body} />
             <OurClients />
-            <Footer />
         </main>
     )
 };

@@ -18,10 +18,19 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
 
     return (
         <>
+            
             <nav
                 className={`absolute top-16 left-0 w-64 h-screen bg-gray-200 transform transition-all duration-400 z-50 ${
                     isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
                 }`}>
+                
+                {/** Protection to not happen any click with the 
+                 * sidebar "CLOSED".
+                 */}
+                {
+                    !isOpen && 
+                        <div className='h-full w-full' />
+                }
                 <ul>
                     {pages.map((page,) => {
 

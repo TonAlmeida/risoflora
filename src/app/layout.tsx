@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { Header } from "@/components/Header";
 import { UpButton } from "@/components/UpButton";
+import { Footer } from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,16 +29,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="min-h-screen h-screen" lang="en">
+    <html className="h-screen" lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-5xl mx-auto min-h-screen bg-gray-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-5xl mx-auto bg-gray-300`}
       >
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col">
           <Header />
           <main className="flex-1">
             {children}
           </main>
           <UpButton />
+          <Footer />
         </div>
       </body>
     </html>

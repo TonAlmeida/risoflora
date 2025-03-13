@@ -1,7 +1,6 @@
 import { BestSellers } from "@/components/BestSellers";
 import { Carroucel } from "@/components/ui/Carroucel";
 import { Categories } from "@/components/Categories";
-import { Footer } from "@/components/Footer";
 import { Curiosity } from "@/components/Curiosity";
 
 import { banners } from "@/data/banners";
@@ -22,7 +21,6 @@ export default function Page() {
       <Categories />
       <Curiosity title={curiosity.title} body={curiosity.body} />
       <BestSellers />
-      <Footer />
     </main>
   );
 }
