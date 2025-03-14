@@ -1,5 +1,5 @@
 import { bestSellers } from "@/data/bestSellers";
-import { Title } from "./ui/Title";
+import { Title } from "./Title";
 export const BestSellers = () => {
     return (
         <section className="text-center p-14 text-orange-950 bg-white">

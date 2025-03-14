@@ -3,7 +3,7 @@ import { OurClients } from "@/components/OurClients";
 import { Tabs } from "@/components/Tabs";
 import { OurWork } from "@/components/OurWork";
 import { OurTeam } from "@/components/OurTeam";
-import { Curiosity } from "@/components/Curiosity";
+import { Curiosity } from "@/components/ui/Curiosity";
 
 const curiosity = {
     title: 'Porque Orgânico?',

@@ -1,4 +1,4 @@
-import { BestSellers } from "@/components/BestSellers";
+import { BestSellers } from "@/components/ui/BestSellers";
 import { CartItem } from "@/components/ui/CartItem";
 import { Title } from "@/components/ui/Title";
 
@@ -12,18 +12,18 @@ export default function Page() {
                     <CartItem />
                     <CartItem />
                 </div>
-                
-                <div className="flex flex-col justify-around border-2 border-black p-3 italic sm:w-1/2 sm:ml-2 w-full">
-                    <div className="flex justify-between items-end text-2xl p-3 text-center">
+                 
+                <div className="flex flex-col justify-around border-2 border-black p-3 italic sm:w-1/2 sm:ml-2 w-full text-lg">
+                    <div className="flex justify-between items-end p-3 text-center">
                         <h2 className="">tax</h2>
                         <h2>R$: 11,00</h2>
                     </div>
-                    <div className="flex justify-between items-end text-2xl p-3 text-center">
+                    <div className="flex justify-between items-end p-3 text-center">
                         <h2 className="">IOF</h2>
                         <h2>R$: 4,00</h2>
                     </div>
                     <hr className="border-b-2 border-black w-full" />
-                    <div className="flex justify-between items-end text-2xl p-3 text-center font-bold">
+                    <div className="flex justify-between items-end p-3 text-center font-bold">
                         <h2 className="">Total</h2>
                         <h2>R$: 125,00</h2>
                     </div>
