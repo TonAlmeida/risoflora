@@ -2,13 +2,14 @@ type Props = {
     title: string;
     color: string;
     url: string;
+    imageURL: string;
 }
 
-export const Banner = ({title, color, url}: Props) => {
+export const Banner = ({title, color, url, imageURL}: Props) => {
 
     return (
-        <a href={url} style={{ backgroundImage: "url('images/banner2.jpg')" }} className={`w-full bg-risoflora bg-cover bg-center text-gray-600 h-40 sm:h-96 flex items-center justify-center text-center`}>
-            <h1 className={`bg-${color} p-1 pt-3 text-white m-5 text-6xl sm:text-9xl font-bold`}>{title}</h1>
+        <a href={url} style={{ backgroundImage: `url('${imageURL}')` }} className={`w-full bg-gray-400 bg-cover bg-center h-40 sm:h-52 flex items-center justify-center text-center`}>
+            <h1 className={`bg-${color} p-1 pt-3 text-risoflora m-5 text-6xl sm:text-9xl font-bold`}>{title}</h1>
         </a>
     )
 };

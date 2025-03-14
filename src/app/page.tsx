@@ -1,3 +1,4 @@
+
 import { BestSellers } from "@/components/ui/BestSellers";
 import { Carroucel } from "@/components/ui/Carroucel";
 import { Categories } from "@/components/ui/Categories";
