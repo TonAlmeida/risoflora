@@ -9,9 +9,8 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel"
-import { bannerType } from "@/types/bannerType"
 
-export function Carroucel({banners}: {banners: bannerType[]}) {
+export function Carroucel({banners}: {banners: string[] | string}) {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
@@ -34,15 +33,26 @@ export function Carroucel({banners}: {banners: bannerType[]}) {
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent className="flex">
           {
-            banners.map((banner, index) => (
+              typeof banners != "string" && 
+              banners.map((banner, index) => (
               <CarouselItem key={index} className="w-full flex-shrink-0">
                 <img
-                  src={banner.url}
-                  alt={banner.title}
+                  src={banner}
+                  alt={banner}
                   className="w-full h-96 object-cover"
                 />
               </CarouselItem>
             ))
+          }
+          {
+            typeof banners === "string" &&
+            <CarouselItem>
+              <img
+                  src={banners}
+                  alt={banners}
+                  className="w-full h-96 object-cover"
+                />
+            </CarouselItem>
           }
         </CarouselContent>
         <CarouselPrevious className="left-7" />

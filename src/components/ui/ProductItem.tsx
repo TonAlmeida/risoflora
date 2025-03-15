@@ -16,7 +16,8 @@ export const ProductItem = ({product}: Props) => {
 
     const handleProductClick = (e: React.MouseEvent) => {
         router.push(
-            `/product?name=${product.name}&
+            `/product?
+            name=${product.name}&
             description=${product.description}&
             price=${product.price.toFixed(2)}&
             category=${product.category}&
@@ -25,7 +26,7 @@ export const ProductItem = ({product}: Props) => {
     }
 
     return (
-        <div onClick={e => handleProductClick(e)} className="group">
+        <div onClick={e => handleProductClick(e)} className="group cursor-pointer">
             <div className="bg-white p-4 w-52 flex flex-col justify-between">
                 <img className="border w-48 h-48" src={product.url} alt={product.description}/>
                 <p className="whitespace-nowrap truncate italic text-mds my-2 group-hover:underline">{product.name}</p>

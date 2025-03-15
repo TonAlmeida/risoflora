@@ -13,7 +13,8 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
     const [currentPath, setCurrentPath] = useState('');
 
     useEffect(() => {
-        setCurrentPath(window.location.pathname);
+        const path = window.location.pathname.split("?");
+        setCurrentPath(path[0]);
     }, []);
 
     return (

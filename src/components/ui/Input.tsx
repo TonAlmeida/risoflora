@@ -30,6 +30,7 @@ export const Input = ({search, setSearch}: Props) => {
     return (
         <div className="flex">
         <input
+            autoFocus
             onChange={e => hendleChange(e)}
             value={value}
             type="text"

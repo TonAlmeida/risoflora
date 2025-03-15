@@ -1,18 +1,11 @@
 "use client"
 import { BestSellers } from "@/components/ui/BestSellers";
-import { Carroucel } from "@/components/ui/Carroucel";
 import { Title } from "@/components/ui/Title";
-import { banners } from "@/data/banners";
-import { ProductType } from "@/types/productType";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
-type Props = {
-    product: ProductType;
-}
 
-
-export const Product = ({product}: Props) => {
+export const Product = () => {
     
     const searchParams = useSearchParams();
     const [name, description, price, category, imageURL] = Array.from(searchParams.values());
@@ -26,7 +19,7 @@ export const Product = ({product}: Props) => {
             <Title title={name} />
            <div className="grid grid-cols-3">
                 <div className="p-3 col-span-2">
-                    <Carroucel banners={banners} />
+                    <img className="h-72 m-auto" src={imageURL} alt={name} />
                 </div>
                 <div className="flex flex-col p-4">
                     <p className="grow text-lg font-bold">{description}</p>
