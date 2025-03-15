@@ -3,6 +3,7 @@ import { OurClients } from "@/components/OurClients";
 import { Tabs } from "@/components/Tabs";
 import { OurWork } from "@/components/OurWork";
 import { OurTeam } from "@/components/OurTeam";
+import { Presentation } from "@/components/ui/Presentation";
 
 export const About = () => {
     return (
@@ -11,6 +12,7 @@ export const About = () => {
             <Tabs />
             <OurWork />
             <OurTeam />
+            <hr className="bg-gray-500 w-4/5 mt-10 m-auto" />
             <OurClients />
         </main>
     )

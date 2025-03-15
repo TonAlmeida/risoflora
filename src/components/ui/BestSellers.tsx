@@ -10,7 +10,7 @@ export const BestSellers = () => {
     return (
         <section className="text-center p-14 text-orange-950 bg-white">
             <Title title="Mais Vendidos" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-7 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-6 gap-4">
                 {
                 bestSellers.map((product, index) => {
 
