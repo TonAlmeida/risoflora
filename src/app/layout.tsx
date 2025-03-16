@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html className="" lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-5xl max-h-fit mx-auto bg-gray-300 overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-6xl max-h-fit mx-auto bg-gray-300 overflow-hidden`}
       >
         <div className="flex flex-col">
           <Header />
