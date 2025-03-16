@@ -6,6 +6,7 @@ import { ProductItem } from "@/components/ui/ProductItem";
 import { ProductsList } from "@/data/productsList";
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from "react";
+import { Suspense } from "react";
 
 export default function Products() {
     const [search, setSearch] = useState<string>('');
@@ -25,6 +26,7 @@ export default function Products() {
 
     return (
         <main className="">
+            <Suspense fallback={<div>Loading...</div>}>
             <Input search={search} setSearch={setSearch} />
             <div className="flex gap-5 flex-wrap justify-around n p-4 pt-8 bg-gray-200">
                 {
@@ -42,6 +44,7 @@ export default function Products() {
                         </div>
                 }
             </div>
+            </Suspense>
             <BestSellers />
         </main>
     );
