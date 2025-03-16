@@ -1,6 +1,6 @@
 "use client"
 import { bestSellers } from "@/data/bestSellers";
-import { Title } from "./Title";
+import { Title } from "@/components/ui/Title";
 import { PlusIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 export const BestSellers = () => {

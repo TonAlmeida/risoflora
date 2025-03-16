@@ -1,6 +1,6 @@
 'use client';
 
-import { BestSellers } from "@/components/ui/BestSellers";
+import { BestSellers } from "@/components/BestSellers";
 import { Input } from "@/components/ui/Input";
 import { ProductItem } from "@/components/ui/ProductItem";
 import { Products } from "@/data/products";

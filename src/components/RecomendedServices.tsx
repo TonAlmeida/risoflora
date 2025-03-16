@@ -1,6 +1,6 @@
 "use client"
 import { recomendedServices } from "@/data/recomendedServices"
-import { ServiceItem } from "./ServiceItem"
+import { ServiceItem } from "./ui/ServiceItem"
 import { Title } from "@/components/ui/Title"
 
 export const RecomendedServices = () => {

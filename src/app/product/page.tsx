@@ -1,5 +1,5 @@
 "use client"
-import { BestSellers } from "@/components/ui/BestSellers";
+import { BestSellers } from "@/components/BestSellers";
 import { Title } from "@/components/ui/Title";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";

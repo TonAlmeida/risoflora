@@ -1,4 +1,4 @@
-import { BestSellers } from "@/components/ui/BestSellers";
+import { BestSellers } from "@/components/BestSellers";
 import { CartItem } from "@/components/ui/CartItem";
 import { Title } from "@/components/ui/Title";
 

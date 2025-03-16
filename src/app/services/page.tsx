@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/Input";
 import { useState } from "react";
 import { Services } from "@/data/services";
 import { ServiceItem } from "@/components/ui/ServiceItem";
-import { RecomendedServices } from "@/components/ui/RecomendedServices";
+import { RecomendedServices } from "@/components/RecomendedServices";
 
 export default function Page() {
     const [search, setSearch] = useState<string>('');

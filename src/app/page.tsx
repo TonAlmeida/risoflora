@@ -1,10 +1,8 @@
-
-import { OurWork } from "@/components/OurWork";
-import { BestSellers } from "@/components/ui/BestSellers";
+import { BestSellers } from "@/components/BestSellers";
 import { Carroucel } from "@/components/ui/Carroucel";
-import { Categories } from "@/components/ui/Categories";
-import { Curiosity } from "@/components/ui/Curiosity";
-import { RecomendedServices } from "@/components/ui/RecomendedServices";
+import { Categories } from "@/components/Categories";
+import { Curiosity } from "@/components/Curiosity";
+import { RecomendedServices } from "@/components/RecomendedServices";
 
 import { banners } from "@/data/banners";
 
