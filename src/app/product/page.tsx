@@ -3,6 +3,7 @@ import { BestSellers } from "@/components/BestSellers";
 import { Title } from "@/components/ui/Title";
 import { useSearchParams } from 'next/navigation'
 import { useEffect } from "react";
+import { Suspense } from "react";
 
 
 export default function Product() {
@@ -15,6 +16,7 @@ export default function Product() {
     })
 
     return (
+        <Suspense>
         <main className="bg-white py-10 px-4">
             <Title title={name} />
            <div className="grid grid-cols-1 sm:grid-cols-3 py-4 border-2 rounded-lg">
@@ -30,5 +32,6 @@ export default function Product() {
             </div>
             <BestSellers />
         </main>
+        </Suspense>
     )
 };
