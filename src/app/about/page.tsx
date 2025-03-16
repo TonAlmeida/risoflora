@@ -4,7 +4,7 @@ import { Tabs } from "@/components/Tabs";
 import { OurWork } from "@/components/OurWork";
 import { OurTeam } from "@/components/OurTeam";
 
-export const About = () => {
+export default function About() {
     return (
         <main className="h-full bg-white">
             <Banner url="/about" title="Sobre" color="white" imageURL="" />
@@ -16,5 +16,3 @@ export const About = () => {
         </main>
     )
 };
-
-export default About;
