@@ -13,7 +13,7 @@ import { Title } from "./ui/Title"
 
 export function OurTeam() {
   return (
-    <div className="text-center">
+    <div className="text-center bg-white">
     <Title title="Nosso Time" />
     <div className="w-full flex justify-center py-10">
         <Carousel

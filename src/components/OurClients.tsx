@@ -13,7 +13,7 @@ import { Title } from "@/components/ui/Title"
 
 export function OurClients() {
   return (
-    <div className="text-center">
+    <div className="text-center bg-white">
     <Title title="Depoimento de clientes" />
     <div className="w-full flex justify-center py-10">
         <Carousel

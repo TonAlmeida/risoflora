@@ -13,7 +13,7 @@ export const Tabs = () => {
   };
 
   return (
-    <div className="my-10 text-orange-950 h-[600px] sm:h-[400px] bg-white">
+    <div className="py-10 text-orange-950 h-[600px] sm:h-[400px] bg-white">
       <div id="tabs" className="w-full flex justify-around italic">
         <div
           className={`${tabClass} ${selected == "about" && "border-risoflora border-b-4"}`}
