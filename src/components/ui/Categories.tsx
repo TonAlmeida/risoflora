@@ -17,7 +17,7 @@ export const Categories = () => {
     return (
         <section className="text-center p-14 bg-white">
            <Title title="Categorias" />
-            <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 md:grid-cols-4">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 md:grid-cols-4 pt-10">
                 {
                     categories.map((item) => (
                         <div onClick={() => handleClick(item)} key={item.id} className="cursor-pointer">

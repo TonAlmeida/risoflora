@@ -30,7 +30,7 @@ export function Carroucel({banners}: {banners: string[] | string}) {
 
   return (
     <div className="w-full mx-auto overflow-hidden">
-      <Carousel setApi={setApi} className="w-full">
+      <Carousel setApi={setApi} className="w-full bg-gray-100">
         <CarouselContent className="flex">
           {
               typeof banners != "string" && 

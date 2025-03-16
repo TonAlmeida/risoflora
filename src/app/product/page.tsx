@@ -17,8 +17,8 @@ export const Product = () => {
     return (
         <main className="bg-white py-10 px-4">
             <Title title={name} />
-           <div className="grid grid-cols-3 py-4 border-2 rounded-lg">
-                <div className="p-3 col-span-2">
+           <div className="grid grid-cols-1 sm:grid-cols-3 py-4 border-2 rounded-lg">
+                <div className="p-3 sm:col-span-2">
                     <img className="h-72 m-auto" src={imageURL} alt={name} />
                 </div>
                 <div className="flex flex-col p-4 border-l-2">

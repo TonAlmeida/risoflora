@@ -1,6 +1,7 @@
 "use client"
 import { pages } from '@/data/pages';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 
 type Props = {
@@ -11,11 +12,13 @@ type Props = {
 export const SideBar = ({ isOpen, setIsOpen }: Props) => {
 
     const [currentPath, setCurrentPath] = useState('');
+    const path = usePathname();
 
     useEffect(() => {
-        const path = window.location.pathname.split("?");
-        setCurrentPath(path[0]);
-    }, []);
+        setCurrentPath(path);
+    }, [path]);
+
+    console.log(currentPath)
 
     return (
         <>
@@ -34,7 +37,6 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                 }
                 <ul>
                     {pages.map((page,) => {
-
                         const isActive = currentPath === page.path;
 
                         return (

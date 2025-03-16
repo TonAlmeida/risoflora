@@ -24,7 +24,7 @@ export const Header = () => {
           </button>
 
           <a href="/">
-            <h1 className="text-xl font-bold ml-2 text-orange-950">Risoflora</h1>
+            <h1 className="text-xl ml-2 font-sans text-orange-950">Risoflora</h1>
           </a>
         </div>
 
