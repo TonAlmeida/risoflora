@@ -8,7 +8,7 @@ import { Suspense, useEffect } from "react";
 // Componente filho que usa useSearchParams
 function ProductDetails() {
     const searchParams = useSearchParams();
-    const [name, description, category, price, imageURL] = searchParams.values();
+    const [name, description, price, category, imageURL] = searchParams.values();
 
     useEffect(() => {
         if (name) {
