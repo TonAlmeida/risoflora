@@ -10,7 +10,7 @@ export const ServiceItem = ({service}: {service: ServiceType}) => {
         <div
             onClick={e => handleServiceClick(e)}
             className={` group cursor-pointer p-4
-                text-risoflora rounded-lg w-60 h-60
+                text-risoflora rounded-lg w-72 h-60
                 sm:w-80 sm:h-80 bg-white`}
             >
             <div className="flex flex-col justify-around border h-full p-4 rounded-md">
