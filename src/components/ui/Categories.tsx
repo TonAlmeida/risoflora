@@ -16,7 +16,7 @@ export const Categories = () => {
     
     return (
         <section className="text-center p-14 bg-white">
-           <Title title="Categorias" />
+           <Title title="Categorias de produtos" />
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 md:grid-cols-4 pt-10">
                 {
                     categories.map((item) => (

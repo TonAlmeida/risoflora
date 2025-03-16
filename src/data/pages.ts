@@ -15,16 +15,12 @@ export const pages = [
         "title": "Sobre",
         "path": "/about"
     },
-    {
-        "title": "Galeria",
-        "path": "/galery"
-    },
+    // {
+    //     "title": "Galeria",
+    //     "path": "/galery"
+    // },
     {
         "title": "Carrinho",
         "path": "/cart"
     },
-    {
-        "title": "Contato",
-        "path": "/contact"
-    }
 ]

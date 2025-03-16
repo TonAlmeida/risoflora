@@ -2,6 +2,7 @@
 import { pages } from '@/data/pages';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { ContactUs } from './ui/ContactUs';
 
 
 type Props = {
@@ -52,6 +53,7 @@ export const SideBar = ({ isOpen, setIsOpen }: Props) => {
                     })
                     }
                 </ul>
+                <ContactUs />
             </nav>
             {
                 isOpen && (

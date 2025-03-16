@@ -9,11 +9,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { clients } from "@/data/clients"
+import { Title } from "@/components/ui/Title"
 
 export function OurClients() {
   return (
     <div className="text-center">
-    <h2 className="my-10 text-2xl text-orange-950">Nossos Clientes</h2>
+    <Title title="Depoimento de clientes" />
     <div className="w-full flex justify-center py-10">
         <Carousel
             opts={{

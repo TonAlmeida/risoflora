@@ -1,3 +1,4 @@
+"use client"
 import { recomendedServices } from "@/data/recomendedServices"
 import { ServiceItem } from "./ServiceItem"
 import { Title } from "@/components/ui/Title"

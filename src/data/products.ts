@@ -4,7 +4,7 @@ export const Products: ProductType[] = [
     {
       id: 1,
       "name": "Muda de Aloe Vera",
-      "description": "Aloe Vera é conhecida por suas propriedades calmantes e hidratantes, ideal para uso cosmético e medicinal.",
+      "description": "Aloe Vera é conhecida por suas propriedades calmantes e hidratantes, ideal para uso cosmético e medicinal. suculentas suculenta",
       "category": "Plantas Medicinais",
       price: 15.00,
       url: 'images/products/AloeVera/AloeVera2.jpg'

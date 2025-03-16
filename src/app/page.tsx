@@ -1,8 +1,10 @@
 
+import { OurWork } from "@/components/OurWork";
 import { BestSellers } from "@/components/ui/BestSellers";
 import { Carroucel } from "@/components/ui/Carroucel";
 import { Categories } from "@/components/ui/Categories";
 import { Curiosity } from "@/components/ui/Curiosity";
+import { RecomendedServices } from "@/components/ui/RecomendedServices";
 
 import { banners } from "@/data/banners";
 
@@ -23,6 +25,7 @@ export default function Page() {
       <Categories />
       <Curiosity title={curiosity.title} body={curiosity.body} />
       <BestSellers />
+      <RecomendedServices />
     </main>
   );
 }

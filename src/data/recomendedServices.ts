@@ -65,15 +65,4 @@ export const recomendedServices = [
           "max": 100
         }
       },
-      {
-        "service_id": 8,
-        "service_name": "Projeto paisagístico",
-        "service_description": "Desenvolvimento de projeto paisagístico para jardins e áreas externas",
-        "service_category": "Planning",
-        "service_duration": "1-2 semanas",
-        "service_price_range": {
-          "min": 5000,
-          "max": 30000
-        }
-      },
 ]
