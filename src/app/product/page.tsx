@@ -3,19 +3,41 @@
 import { BestSellers } from "@/components/BestSellers";
 import { Title } from "@/components/ui/Title";
 import { useSearchParams } from 'next/navigation'
-import { useEffect, Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 export default function Product() {
     const searchParams = useSearchParams();
-    const [name, description, price, category, imageURL] = Array.from(searchParams.values());
+    const [name, setName] = useState('');
+    const [description, setDescription] = useState('');
+    const [price, setPrice] = useState('');
+    const [category, setCategory] = useState('');
+    const [imageURL, setImageURL] = useState('');
+
+    // Use an effect to set the values from searchParams once they are available
+    useEffect(() => {
+        const [name, description, price, category, imageURL] = Array.from(searchParams.values());
+        setName(name || '');
+        setDescription(description || '');
+        setPrice(price || '');
+        setCategory(category || '');
+        setImageURL(imageURL || '');
+    }, [searchParams]); // Re-run this effect when searchParams changes
 
     useEffect(() => {
-        document.title = name;
-    }, [name]); // Add dependency to avoid warnings
+        if (name) {
+            document.title = name;
+        }
+    }, [name]); // Avoid warning by adding a dependency
+
+    // Check if values are loaded
+    if (!name || !description || !price || !category || !imageURL) {
+        return (
+            <div>Loading...</div>
+        );
+    }
 
     return (
         <main className="bg-white py-10 px-4">
-            {/* Wrap the entire component in Suspense */}
             <Suspense fallback={<div>Loading...</div>}>
                 <Title title={name} />
                 <div className="grid grid-cols-1 sm:grid-cols-3 py-4 border-2 rounded-lg">
@@ -32,5 +54,5 @@ export default function Product() {
                 <BestSellers />
             </Suspense>
         </main>
-    )
+    );
 }
