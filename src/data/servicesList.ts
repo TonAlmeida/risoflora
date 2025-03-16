@@ -1,4 +1,6 @@
-export const Services = [
+import { ServiceType } from "@/types/serviceType";
+
+export const ServicesList: ServiceType[] = [
   {
     "service_id": 1,
     "service_name": "Corte de grama",

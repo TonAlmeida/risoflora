@@ -2,7 +2,7 @@ import { BestSellers } from "@/components/BestSellers";
 import { CartItem } from "@/components/ui/CartItem";
 import { Title } from "@/components/ui/Title";
 
-export default function Page() {
+export default function Cart() {
     return (
         <main className="h-full p-3 bg-gray-200">
             <Title title="Carrinho" />

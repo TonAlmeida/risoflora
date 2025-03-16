@@ -1,14 +1,14 @@
 "use client"
 import { Input } from "@/components/ui/Input";
 import { useState } from "react";
-import { Services } from "@/data/services";
+import { ServicesList } from "@/data/servicesList";
 import { ServiceItem } from "@/components/ui/ServiceItem";
 import { RecomendedServices } from "@/components/RecomendedServices";
 
-export default function Page() {
+export default function Services() {
     const [search, setSearch] = useState<string>('');
 
-    const filteredServices = Services.filter(service => {
+    const filteredServices = ServicesList.filter(service => {
         const data = `${service.service_category} ${service.service_description}
             ${service.service_duration} ${service.service_name}`;
         

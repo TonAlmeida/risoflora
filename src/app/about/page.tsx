@@ -5,7 +5,7 @@ import { OurWork } from "@/components/OurWork";
 import { Tabs } from "@/components/Tabs";
 import { Banner } from "@/components/ui/Banner";
 
-export default function Page() {
+export default function About() {
     return (
         <main>
             <Banner title="Sobre" color="gray-100" url="/about" imageURL=""  />

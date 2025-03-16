@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 
-export const Product = () => {
+export default function Product() {
     
     const searchParams = useSearchParams();
     const [name, description, price, category, imageURL] = Array.from(searchParams.values());
@@ -31,6 +31,4 @@ export const Product = () => {
             <BestSellers />
         </main>
     )
-}
-
-export default Product;
+};

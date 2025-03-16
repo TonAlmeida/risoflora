@@ -3,11 +3,11 @@
 import { BestSellers } from "@/components/BestSellers";
 import { Input } from "@/components/ui/Input";
 import { ProductItem } from "@/components/ui/ProductItem";
-import { Products } from "@/data/products";
+import { ProductsList } from "@/data/productsList";
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from "react";
 
-export default function Page() {
+export default function Products() {
     const [search, setSearch] = useState<string>('');
 
     const searchParams = useSearchParams();
@@ -18,7 +18,7 @@ export default function Page() {
             setSearch(getSearch);
     }, [])
     
-    const filterResolt = Products.filter(product => {
+    const filterResolt = ProductsList.filter(product => {
         const data = `${product.category} ${product.description} ${product.name} ${product.url}`;
         return data.toLowerCase().includes(search.toLowerCase());
     })
