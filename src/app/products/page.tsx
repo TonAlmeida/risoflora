@@ -7,7 +7,6 @@ import { ProductsList } from "@/data/productsList";
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState, Suspense } from "react";
 
-// Componente filho que usa useSearchParams
 function ProductListWithSearch() {
     const [search, setSearch] = useState<string>('');
     const searchParams = useSearchParams();
@@ -42,7 +41,6 @@ function ProductListWithSearch() {
     );
 }
 
-// Componente principal da página
 export default function Products() {
     return (
         <main className="">
