@@ -3,9 +3,9 @@
 import { BestSellers } from "@/components/BestSellers";
 import { Title } from "@/components/ui/Title";
 import { useSearchParams } from 'next/navigation';
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect } from "react";
 
-// Create a separate component for the product details
+// Componente filho que usa useSearchParams
 function ProductDetails() {
     const searchParams = useSearchParams();
     const [name, description, category, price, imageURL] = searchParams.values();
@@ -34,13 +34,14 @@ function ProductDetails() {
     );
 }
 
+// Componente principal da página
 export default function Product() {
     return (
         <main className="bg-white py-10 px-4">
             <Suspense fallback={<div>Loading...</div>}>
                 <ProductDetails />
-                <BestSellers />
             </Suspense>
+            <BestSellers />
         </main>
     );
 }
