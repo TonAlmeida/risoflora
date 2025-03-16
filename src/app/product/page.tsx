@@ -13,7 +13,6 @@ export default function Product() {
     const [category, setCategory] = useState('');
     const [imageURL, setImageURL] = useState('');
 
-    // Use an effect to set the values from searchParams once they are available
     useEffect(() => {
         const [name, description, price, category, imageURL] = Array.from(searchParams.values());
         setName(name || '');
@@ -21,13 +20,13 @@ export default function Product() {
         setPrice(price || '');
         setCategory(category || '');
         setImageURL(imageURL || '');
-    }, [searchParams]); // Re-run this effect when searchParams changes
+    }, [searchParams]);
 
     useEffect(() => {
         if (name) {
             document.title = name;
         }
-    }, [name]); // Avoid warning by adding a dependency
+    }, [name]); 
 
     // Check if values are loaded
     if (!name || !description || !price || !category || !imageURL) {
@@ -38,6 +37,7 @@ export default function Product() {
 
     return (
         <main className="bg-white py-10 px-4">
+            {/* Suspense is now wrapping the entire client-side component */}
             <Suspense fallback={<div>Loading...</div>}>
                 <Title title={name} />
                 <div className="grid grid-cols-1 sm:grid-cols-3 py-4 border-2 rounded-lg">
